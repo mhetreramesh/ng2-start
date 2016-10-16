@@ -9,4 +9,4 @@ var Greeter = (function () {
 }());
 var greeter = new Greeter();
 greeter.saySomething('Ramesh');
-//# sourceMappingURL=magic.js.map
+//# sourceMappingURL=main.js.map

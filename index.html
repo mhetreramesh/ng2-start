@@ -2,7 +2,21 @@
 <html>
 <head>
 	<title>My Angular 2 APP</title>
+	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- JS -->
+	<!-- Load Dependencies -->
+	<script src="node_modules/core-js/client/shim.min.js"></script>
+	<script src="node_modules/zone.js/dist/zone.js"></script>
+	<script src="node_modules/reflect-metadata/Reflect.js"></script>
+
+	<!-- Load Anuglar App with system.js -->
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="system.config.js"></script>
+	<script>
+	System.import('app').catch(function(err) { console.error(err); });
+	</script>
 	<style type="text/css">
 		body{
 			padding: 50px 0;
