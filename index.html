@@ -15,7 +15,7 @@
 	<script src="node_modules/systemjs/dist/system.src.js"></script>
 	<script src="system.config.js"></script>
 	<script>
-	System.import('app').catch(function(err) { console.error(err); });
+	System.import('app').catch(function(err) { console.log(err); });
 	</script>
 	<style type="text/css">
 		body{
@@ -24,6 +24,6 @@
 	</style>
 </head>
 <body class="container">
-I am the app
+<my-app></my-app>
 </body>
 </html>

@@ -1,9 +1,4 @@
-class Greeter {
-	saySomething(message: string = 'Whats up') {
-		return "Hello " + message;
-	}
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
 
-}
-
-var greeter = new Greeter();
-greeter.saySomething('Ramesh');
+platformBrowserDynamic().bootstrapModule(AppModule);
