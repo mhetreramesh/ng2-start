@@ -29,6 +29,9 @@ var AppComponent = (function () {
             .subscribe(function (data) { return _this.enquiriesList = data.data; }, function (err) { return console.log(err); });
         this.enquiries = [{ id: 1, name: 'Ramesh', email: "rameshm" }];
     };
+    AppComponent.prototype.selectEnquiry = function (enquiry) {
+        this.actveEnquiry = enquiry;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
