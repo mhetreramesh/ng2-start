@@ -14,8 +14,8 @@
       <div *ngIf="enquiries">
       <ul class="list-group users-list">
         <li class="list-group-item"
-          *ngFor="let enquiry of enquiries">
-          {{ enquiry.name }} ({{ enquiry.username }})
+          *ngFor="let enquiry of enquiriesList">
+          {{ enquiry.name }} ({{ enquiry.email }})
         </li>
       </ul>
       </div>
