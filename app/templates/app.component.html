@@ -14,7 +14,9 @@
       <div *ngIf="enquiries">
       <ul class="list-group users-list">
         <li class="list-group-item"
-          *ngFor="let enquiry of enquiriesList">
+          *ngFor="let enquiry of enquiriesList"
+          (click)="selectEnquiry(enquiry)"
+          [class.active]="enquiry === actveEnquiry">
           {{ enquiry.name }} ({{ enquiry.email }})
         </li>
       </ul>
@@ -23,9 +25,14 @@
 
     <div class="col-sm-8">
 
-      <div class="jumbotron" *ngIf="!activeUser">
+      <div class="jumbotron" *ngIf="!actveEnquiry">
         <span class="glyphicon glyphicon-hand-left"></span>
-        <h2>Choose a User</h2>
+        <h2>Choose an enquiry</h2>
+      </div>
+
+      <div class="jumbotron" *ngIf="actveEnquiry">
+        <h2>{{ actveEnquiry.name }} - {{ actveEnquiry.name }}</h2>
+        <p>{{ actveEnquiry.msg }}</p>
       </div>
 
     </div>

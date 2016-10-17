@@ -35,5 +35,11 @@ export class AppComponent {
     this.enquiries = [{id:1, name:'Ramesh', email:"rameshm"}];
   }
 
+  actveEnquiry;
+
+  selectEnquiry(enquiry) {
+    this.actveEnquiry = enquiry;
+  }
+
 
 }
