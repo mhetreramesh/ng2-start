@@ -8,8 +8,8 @@ import 'rxjs/add/operator/catch';
 
 @Component({
   selector: 'my-app',
-  templateUrl: './app/app.component.html',
-  styleUrls: ['./app/app.component.css']
+  templateUrl: './app/templates/app.component.html',
+  styleUrls: ['./app/styles/app.component.css']
 })
 
 export class AppComponent {
