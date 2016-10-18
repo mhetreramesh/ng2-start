@@ -11,14 +11,21 @@
   <div class="row">
     <div class="col-sm-4">
 
-      <div *ngIf="enquiries">
-      <ul class="list-group users-list">
+      <div *ngIf="enquiriesList" class="">
+      <ul class="list-group users-list enquiry-list-container"
+         infinite-scroll
+         [infiniteScrollDistance]="2"
+         [scrollWindow]="false"
+         (scrolled)="onScrollDown()">
+
         <li class="list-group-item"
-          *ngFor="let enquiry of enquiriesList"
+          *ngFor="let enquiry of enquiriesList; let last=last"
           (click)="selectEnquiry(enquiry)"
-          [class.active]="enquiry === actveEnquiry">
+          [class.active]="enquiry === actveEnquiry"
+          >
           {{ enquiry.name }} ({{ enquiry.email }})
         </li>
+
       </ul>
       </div>
     </div>
@@ -26,12 +33,12 @@
     <div class="col-sm-8">
 
       <div class="jumbotron" *ngIf="!actveEnquiry">
-        <span class="glyphicon glyphicon-hand-left"></span>
+        <span class=""></span>
         <h2>Choose an enquiry</h2>
       </div>
 
       <div class="jumbotron" *ngIf="actveEnquiry">
-        <h2>{{ actveEnquiry.name }} - {{ actveEnquiry.name }}</h2>
+        <h2>{{ actveEnquiry.name }} - {{ actveEnquiry.email }}</h2>
         <p>{{ actveEnquiry.msg }}</p>
       </div>
 

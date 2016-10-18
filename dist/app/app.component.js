@@ -8,12 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
 //import { Enquiry } from './models/enquiry';
 // Import RxJs required methods
-require('rxjs/add/operator/map');
-require('rxjs/add/operator/catch');
+require("rxjs/add/operator/map");
+require("rxjs/add/operator/catch");
 //import { InfiniteScroll } from 'angular2-infinite-scroll';
 var AppComponent = (function () {
     function AppComponent(http) {
@@ -40,19 +40,22 @@ var AppComponent = (function () {
         var options = new http_1.RequestOptions({ headers: headers });
         var enquiryData = this.http.get('http://demo.vegfru.com/api/v1/enquiries?offset=' + this.pageNumber + '&limit=20&orderBy=date_time&sortedBy=DESC', options)
             .map(function (res) { return res.json(); })
-            .subscribe(function (data) { return (_a = _this.enquiriesList).push.apply(_a, data.data); var _a; }, function (err) { return console.log(err); });
+            .subscribe(function (data) {
+            return (_a = _this.enquiriesList).push.apply(_a, data.data);
+            var _a;
+        }, function (err) { return console.log(err); });
         this.pageNumber = this.pageNumber + 20;
     };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'chat-container',
-            //directives: [ InfiniteScroll ],
-            templateUrl: './app/templates/app.component.html',
-            styleUrls: ['./app/styles/app.component.css']
-        }), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'chat-container',
+        //directives: [ InfiniteScroll ],
+        templateUrl: './app/templates/app.component.html',
+        styleUrls: ['./app/styles/app.component.css']
+    }),
+    __metadata("design:paramtypes", [http_1.Http])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
