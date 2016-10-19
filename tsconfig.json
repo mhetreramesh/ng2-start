@@ -9,5 +9,11 @@
 		"removeComments": false,
 		"noImplicitAny": false,
 		"outDir": "dist"
-	}
+	},
+	"filesGlob": [
+    "**/*.ts",
+    "**/*.tsx",
+    "!node_modules/**",
+    "node_modules/@types/**/*.d.ts"
+  ]
 }

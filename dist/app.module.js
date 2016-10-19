@@ -13,13 +13,22 @@ var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
 var angular2_infinite_scroll_1 = require('angular2-infinite-scroll');
+var enquiry_chat_component_1 = require('./enquiries/enquiry-chat.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, http_1.JsonpModule, angular2_infinite_scroll_1.InfiniteScrollModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [
+                platform_browser_1.BrowserModule,
+                http_1.HttpModule,
+                http_1.JsonpModule,
+                angular2_infinite_scroll_1.InfiniteScrollModule
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                enquiry_chat_component_1.EnquiryChatComponent
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

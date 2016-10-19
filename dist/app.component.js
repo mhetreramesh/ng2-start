@@ -14,7 +14,6 @@ var http_1 = require('@angular/http');
 // Import RxJs required methods
 require('rxjs/add/operator/map');
 require('rxjs/add/operator/catch');
-//import { InfiniteScroll } from 'angular2-infinite-scroll';
 var AppComponent = (function () {
     function AppComponent(http) {
         this.http = http;
@@ -46,9 +45,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'chat-container',
-            //directives: [ InfiniteScroll ],
-            templateUrl: './app/templates/app.component.html',
-            styleUrls: ['./app/styles/app.component.css']
+            templateUrl: './app/templates/chat-container.html',
+            styleUrls: ['./app/styles/chat-service.css']
         }), 
         __metadata('design:paramtypes', [http_1.Http])
     ], AppComponent);
