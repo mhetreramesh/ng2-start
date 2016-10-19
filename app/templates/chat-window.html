@@ -1,0 +1,9 @@
+<div class="jumbotron" *ngIf="!enquiry">
+  <span class=""></span>
+  <h2>Choose an enquiry</h2>
+</div>
+
+<div class="jumbotron" *ngIf="enquiry">
+  <h2>{{ enquiry.name }} - {{ enquiry.email }}</h2>
+  <p>{{ enquiry.msg }}</p>
+</div>
