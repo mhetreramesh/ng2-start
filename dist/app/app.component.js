@@ -14,7 +14,6 @@ var http_1 = require("@angular/http");
 // Import RxJs required methods
 require("rxjs/add/operator/map");
 require("rxjs/add/operator/catch");
-//import { InfiniteScroll } from 'angular2-infinite-scroll';
 var AppComponent = (function () {
     function AppComponent(http) {
         this.http = http;
@@ -35,15 +34,13 @@ var AppComponent = (function () {
         this.actveEnquiry = enquiry;
     };
     AppComponent.prototype.onScrollDown = function () {
-        var _this = this;
         var headers = new http_1.Headers({ 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6IjRmMWcyM2ExMmFhIn0.eyJpc3MiOiJodHRwOlwvXC9hcGkudmVnZnJ1LmNvbVwvIiwianRpIjoiNGYxZzIzYTEyYWEiLCJ1aWQiOjEsInVzZXJfaWQiOjEyNzUxLCJpYXQiOjE0NzY2MTg2ODcsImV4cCI6MTQ3NzgyODI4N30.3MCdvVH2RAOEyP3d2l8v5UdN1QZtZaLcSg24i1nfKYM' });
         var options = new http_1.RequestOptions({ headers: headers });
         var enquiryData = this.http.get('http://demo.vegfru.com/api/v1/enquiries?offset=' + this.pageNumber + '&limit=20&orderBy=date_time&sortedBy=DESC', options)
             .map(function (res) { return res.json(); })
-            .subscribe(function (data) {
-            return (_a = _this.enquiriesList).push.apply(_a, data.data);
-            var _a;
-        }, function (err) { return console.log(err); });
+            .subscribe(
+        //data => this.enquiriesList.push(...data.data),
+        function (err) { return console.log(err); });
         this.pageNumber = this.pageNumber + 20;
     };
     return AppComponent;
@@ -51,9 +48,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'chat-container',
-        //directives: [ InfiniteScroll ],
-        templateUrl: './app/templates/app.component.html',
-        styleUrls: ['./app/styles/app.component.css']
+        templateUrl: './app/templates/chat-container.html',
+        styleUrls: ['./app/styles/chat-service.css']
     }),
     __metadata("design:paramtypes", [http_1.Http])
 ], AppComponent);

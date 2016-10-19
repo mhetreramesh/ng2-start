@@ -32,15 +32,7 @@
 
     <div class="col-sm-8">
 
-      <div class="jumbotron" *ngIf="!actveEnquiry">
-        <span class=""></span>
-        <h2>Choose an enquiry</h2>
-      </div>
-
-      <div class="jumbotron" *ngIf="actveEnquiry">
-        <h2>{{ actveEnquiry.name }} - {{ actveEnquiry.email }}</h2>
-        <p>{{ actveEnquiry.msg }}</p>
-      </div>
+      <enquiry-chat [enquiry]="actveEnquiry"></enquiry-chat>
 
     </div>
   </div>

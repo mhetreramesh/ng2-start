@@ -7,13 +7,10 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-//import { InfiniteScroll } from 'angular2-infinite-scroll';
-
 @Component({
   selector: 'chat-container',
-  //directives: [ InfiniteScroll ],
-  templateUrl: './app/templates/app.component.html',
-  styleUrls: ['./app/styles/app.component.css']
+  templateUrl: './app/templates/chat-container.html',
+  styleUrls: ['./app/styles/chat-service.css']
 })
 
 export class AppComponent {
