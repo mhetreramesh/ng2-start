@@ -15,7 +15,7 @@ import 'rxjs/add/operator/catch';
 
 export class AppComponent {
 
-  public enquiriesList: string;
+  public enquiriesList: Array<any>;
   public pageNumber: number;
   public actveEnquiry;
 
